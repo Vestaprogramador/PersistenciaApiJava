@@ -1,4 +1,16 @@
 
+DROP TABLE Convocatorias;
+DROP TABLE Documentos;
+DROP TABLE Empresas;
+DROP TABLE Estados_postulacion;
+DROP TABLE Postulaciones;
+DROP TABLE Resoluciones_postulacion;
+DROP TABLE Roles_usuario;
+DROP TABLE Tipos_documento;
+DROP TABLE Tipos_jornada;
+DROP TABLE Tipos_modalidad;
+DROP TABLE Usuarios;
+
 -- mis tablas
 
 CREATE TABLE Roles_usuario (
@@ -92,7 +104,7 @@ CREATE TABLE Tipos_modalidad (
     descripcion VARCHAR(250) NOT NULL,
     estado_registro NUMBER(1) NOT NULL,
     fecha_creacion_registro DATE NOT NULL,
-    fecha_modificion_registro DATE NOT NULL,
+    fecha_modificacion_registro DATE NOT NULL,
 
     CONSTRAINT PK_llave_tipos_modalidad PRIMARY KEY (id_tipo_modalidad),
     CONSTRAINT UQ_nombre_tipo_modalidad_unico UNIQUE (nombre)
